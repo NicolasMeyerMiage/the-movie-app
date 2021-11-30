@@ -2,8 +2,10 @@ package fr.mbds.squad.idbdata.repository
 
 import fr.mbds.squad.idbdata.api.response.toCategory
 import fr.mbds.squad.idbdata.api.response.toEntity
+import fr.mbds.squad.idbdata.api.response.toMovie
 import fr.mbds.squad.idbdata.api.response.toToken
 import fr.mbds.squad.idbdata.data.Category
+import fr.mbds.squad.idbdata.data.Movie
 import fr.mbds.squad.idbdata.data.Token
 import fr.mbds.squad.idbdata.datasources.LocalDataSource
 import fr.mbds.squad.idbdata.datasources.OnlineDataSource
@@ -45,6 +47,18 @@ class MovieRepository : KoinComponent {
                     it.toCategory()
                 }
                 Result.Succes(categories)
+            }
+            is Result.Error -> result
+        }
+    }
+
+    suspend fun getMoviesByCatId(categoryId: Int): Result<List<Movie>> {
+        return when (val result = online.getMoviesByCatId(categoryId)) {
+            is Result.Succes -> {
+                val results = result.data.map {
+                    it.toMovie()
+                }
+                Result.Succes(results)
             }
             is Result.Error -> result
         }

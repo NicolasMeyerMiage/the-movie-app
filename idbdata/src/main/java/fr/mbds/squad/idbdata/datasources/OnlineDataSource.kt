@@ -1,6 +1,7 @@
 package fr.mbds.squad.idbdata.datasources
 
 import fr.mbds.squad.idbdata.api.response.CategoryResponse
+import fr.mbds.squad.idbdata.api.response.MovieResponse
 import fr.mbds.squad.idbdata.api.response.TokenResponse
 import fr.mbds.squad.idbdata.api.service.MovieService
 import fr.mbds.squad.idbdata.utils.Result
@@ -32,6 +33,16 @@ internal class OnlineDataSource(private val service: MovieService) {
             val response = service.getCategories()
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data.genres)
+                is Result.Error -> result
+            }
+        }
+    }
+
+    suspend fun getMoviesByCatId(categoryId: Int): Result<List<MovieResponse.Result>> {
+        return safeCall {
+            val response = service.getMoviesByCatId(categoryId)
+            when (val result = response.parse()) {
+                is Result.Succes -> Result.Succes(result.data.results)
                 is Result.Error -> result
             }
         }
