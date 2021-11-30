@@ -4,6 +4,8 @@ import fr.mbds.squad.idbdata.api.response.CategoryResponse
 import fr.mbds.squad.idbdata.api.response.TokenResponse
 import fr.mbds.squad.idbdata.api.service.MovieService
 import fr.mbds.squad.idbdata.utils.Result
+import parse
+import safeCall
 
 /**
  * Manipule les données de l'application en utilisant un web service
@@ -19,44 +21,19 @@ internal class OnlineDataSource(private val service: MovieService) {
      * Sinon, une erreur est survenue
      */
     suspend fun getToken(): Result<TokenResponse> {
-        return try {
+        return safeCall {
             val response = service.getToken()
-            if (response.isSuccessful) {
-                Result.Succes(response.body()!!)
-            } else {
-                Result.Error(
-                    exception = Exception(),
-                    message = response.message(),
-                    code = response.code()
-                )
-            }
-        } catch (e: Exception) {
-            Result.Error(
-                exception = e,
-                message = e.message ?: "No message",
-                code = -1
-            )
+            response.parse()
         }
     }
 
     suspend fun getCategories(): Result<List<CategoryResponse.Genre>> {
-        return try {
+        return safeCall {
             val response = service.getCategories()
-            if (response.isSuccessful) {
-                Result.Succes(response.body()!!.genres)
-            } else {
-                Result.Error(
-                    exception = Exception(),
-                    message = response.message(),
-                    code = response.code()
-                )
+            when (val result = response.parse()) {
+                is Result.Succes -> Result.Succes(result.data.genres)
+                is Result.Error -> result
             }
-        } catch (e: Exception) {
-            Result.Error(
-                exception = e,
-                message = e.message ?: "No message",
-                code = -1
-            )
         }
     }
 }
