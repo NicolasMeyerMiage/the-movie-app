@@ -1,4 +1,4 @@
-package com.gmail.eamosse.imdb.ui.home
+package fr.mbds.squad.movieapp.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
-import com.gmail.eamosse.imdb.R
+import fr.mbds.squad.movieapp.R
 
 class HomeSecondFragment : Fragment() {
 

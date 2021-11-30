@@ -1,8 +1,8 @@
-package com.gmail.eamosse.imdb
+package fr.mbds.squad.movieapp
 
 import android.app.Application
-import com.gmail.eamosse.idbdata.di.dataModule
-import com.gmail.eamosse.imdb.di.appModule
+import fr.mbds.squad.idbdata.di.dataModule
+import fr.mbds.squad.movieapp.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -23,7 +23,7 @@ class MdbApplication : Application() {
         // Au démarrage de l'application, on indique à Koin, les différents modules à injecter
         startKoin {
             androidContext(this@MdbApplication)
-            //Ici on ajoute que deux modules, d'autre pourront être ajoutés au besoin
+            // Ici on ajoute que deux modules, d'autre pourront être ajoutés au besoin
             modules(appModule + dataModule)
         }
     }

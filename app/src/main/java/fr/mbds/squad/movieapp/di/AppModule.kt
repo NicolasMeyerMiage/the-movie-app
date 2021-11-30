@@ -1,7 +1,7 @@
-package com.gmail.eamosse.imdb.di
+package fr.mbds.squad.movieapp.di
 
 import android.content.Context
-import com.gmail.eamosse.imdb.ui.home.HomeViewModel
+import fr.mbds.squad.movieapp.ui.home.HomeViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named

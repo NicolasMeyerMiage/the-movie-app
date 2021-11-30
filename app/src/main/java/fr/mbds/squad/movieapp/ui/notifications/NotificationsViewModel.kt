@@ -1,4 +1,4 @@
-package com.gmail.eamosse.imdb.ui.notifications
+package fr.mbds.squad.movieapp.ui.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,14 +1,14 @@
-package com.gmail.eamosse.idbdata.di
+package fr.mbds.squad.idbdata.di
 
 import android.content.Context
 import androidx.room.Room
-import com.gmail.eamosse.idbdata.BuildConfig
-import com.gmail.eamosse.idbdata.api.service.MovieService
-import com.gmail.eamosse.idbdata.datasources.LocalDataSource
-import com.gmail.eamosse.idbdata.datasources.OnlineDataSource
-import com.gmail.eamosse.idbdata.local.daos.TokenDao
-import com.gmail.eamosse.idbdata.local.databases.IdbDataBase
-import com.gmail.eamosse.idbdata.repository.MovieRepository
+import fr.mbds.squad.idbdata.BuildConfig
+import fr.mbds.squad.idbdata.api.service.MovieService
+import fr.mbds.squad.idbdata.datasources.LocalDataSource
+import fr.mbds.squad.idbdata.datasources.OnlineDataSource
+import fr.mbds.squad.idbdata.local.daos.TokenDao
+import fr.mbds.squad.idbdata.local.databases.IdbDataBase
+import fr.mbds.squad.idbdata.repository.MovieRepository
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -26,7 +26,7 @@ val dataModule = module {
             dao = get()
         )
     }
-    single() {
+    single {
         Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(get(named("BASE_URL")) as String)
@@ -76,17 +76,18 @@ private object NetworkXConfig {
                     dao
                 ).requestInterceptor
             )
-            .addInterceptor(HttpLoggingInterceptor().apply {
-                level = if (BuildConfig.DEBUG) {
-                    HttpLoggingInterceptor.Level.BODY
-                } else {
-                    HttpLoggingInterceptor.Level.NONE
+            .addInterceptor(
+                HttpLoggingInterceptor().apply {
+                    level = if (BuildConfig.DEBUG) {
+                        HttpLoggingInterceptor.Level.BODY
+                    } else {
+                        HttpLoggingInterceptor.Level.NONE
+                    }
                 }
-            })
+            )
             .readTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(30, TimeUnit.SECONDS)
             .build()
-
     }
 }
 
