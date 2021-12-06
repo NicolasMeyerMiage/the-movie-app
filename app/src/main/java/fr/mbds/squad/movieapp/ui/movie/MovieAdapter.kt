@@ -1,0 +1,31 @@
+package fr.mbds.squad.movieapp.ui.movie
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import fr.mbds.squad.idbdata.data.Movie
+import fr.mbds.squad.movieapp.databinding.MovieItemListBinding
+
+class MovieAdapter(
+    private val items: List<Movie>
+) :
+    RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+    inner class ViewHolder(private val binding: MovieItemListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(item: Movie) {
+            binding.item = item
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        return ViewHolder(MovieItemListBinding.inflate(inflater, parent, false))
+    }
+
+    override fun getItemCount(): Int = items.size
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(items[position])
+    }
+}
