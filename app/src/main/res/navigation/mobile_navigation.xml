@@ -21,8 +21,11 @@
         android:name="fr.mbds.squad.movieapp.ui.movie.MovieFragment"
         android:label="@string/title_movies">
         <argument
+            android:name="catId"
+            app:argType="string" />
+        <argument
             android:name="catName"
-            app:argType="string"/>
+            app:argType="string" />
         <action
             android:id="@+id/action_MovieFragment_to_MovieDetailFragment"
             app:destination="@id/movie_detail" />

@@ -28,7 +28,7 @@ class CategoryAdapter(private val items: List<Category>) :
         holder.bind(items[position])
         holder.itemView.setOnClickListener {
             val action =
-                HomeFragmentDirections.actionHomeFragmentToMovieFragment(items[position].name)
+                HomeFragmentDirections.actionHomeFragmentToMovieFragment(items[position].id.toString(), items[position].name)
             findNavController(it).navigate(action)
         }
     }

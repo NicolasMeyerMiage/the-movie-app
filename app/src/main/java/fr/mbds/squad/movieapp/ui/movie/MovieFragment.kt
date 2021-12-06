@@ -36,7 +36,7 @@ class MovieFragment : Fragment() {
             token.observe(
                 viewLifecycleOwner,
                 Observer {
-                    getMoviesByGenre(args.catName)
+                    getMoviesByCategoryId(args.catId)
                 }
             )
             movies.observe(

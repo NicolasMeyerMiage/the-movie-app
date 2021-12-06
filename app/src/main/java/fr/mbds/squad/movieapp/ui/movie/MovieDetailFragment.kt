@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -16,6 +17,8 @@ class MovieDetailFragment : Fragment() {
     private val movieViewModel: MovieViewModel by viewModel()
     private val args: MovieDetailFragmentArgs by navArgs()
     private lateinit var binding: FragmentMovieDetailBinding
+    private lateinit var name: TextView
+    private lateinit var vote: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,6 +26,9 @@ class MovieDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMovieDetailBinding.inflate(inflater, container, false)
+        val view = inflater.inflate(R.layout.fragment_movie_detail, container, false)
+        name = view.findViewById(R.id.movie_detail_name)
+        vote = view.findViewById(R.id.movie_detail_vote)
         return binding.root
     }
 
