@@ -4,23 +4,29 @@ import com.google.gson.annotations.SerializedName
 import fr.mbds.squad.idbdata.data.Movie
 
 internal data class MovieResponse(
+    // changer movies par results
     @SerializedName("results")
-    val results: List<Result>
+    val results: List<Result>,
 ) {
     data class Result(
-        @SerializedName("original_title")
-        val original_title: String,
-
         @SerializedName("id")
         val id: Int,
-
-        @SerializedName("poster_path")
+        @SerializedName("original_title")
+        val original_title: String,
+        @SerializedName("vote_average")
+        val vote: String,
+        @SerializedName("release_date")
+        val date: String,
+        @SerializedName("backdrop_path")
         val poster: String
     )
 }
 
 internal fun MovieResponse.Result.toMovie() = Movie(
-    title = original_title,
     id = id,
-    poster = poster
+    name = original_title,
+    vote = vote,
+    date = date,
+    poster = "https://image.tmdb.org/t/p/w185$poster",
+    overview = "nothing"
 )

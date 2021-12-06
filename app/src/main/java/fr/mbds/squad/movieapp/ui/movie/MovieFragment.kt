@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
+import fr.mbds.squad.movieapp.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import fr.mbds.squad.movieapp.databinding.FragmentMovieBinding
 
@@ -29,7 +30,7 @@ class MovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Films - " + args.myCat
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_movies) + " - " + args.myCat
 
         with(movieViewModel) {
             token.observe(

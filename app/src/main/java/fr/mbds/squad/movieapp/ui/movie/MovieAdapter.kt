@@ -2,7 +2,9 @@ package fr.mbds.squad.movieapp.ui.movie
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import fr.mbds.squad.idbdata.data.Movie
 import fr.mbds.squad.movieapp.databinding.MovieItemListBinding
 
@@ -10,8 +12,11 @@ class MovieAdapter(
     private val items: List<Movie>
 ) :
     RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+
     inner class ViewHolder(private val binding: MovieItemListBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        val posterMovie: ImageView = binding.moviePoster
 
         fun bind(item: Movie) {
             binding.item = item
@@ -27,5 +32,10 @@ class MovieAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
+        val movie: Movie = items[position]
+
+        Picasso.get()
+            .load(movie.poster)
+            .into(holder.posterMovie)
     }
 }
