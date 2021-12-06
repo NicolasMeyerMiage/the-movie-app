@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import fr.mbds.squad.movieapp.R
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import fr.mbds.squad.movieapp.databinding.FragmentMovieBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MovieFragment : Fragment() {
 
@@ -36,7 +36,7 @@ class MovieFragment : Fragment() {
             token.observe(
                 viewLifecycleOwner,
                 Observer {
-                    getMoviesByCatId(args.catId)
+                    getMoviesByGenre(args.catName)
                 }
             )
             movies.observe(

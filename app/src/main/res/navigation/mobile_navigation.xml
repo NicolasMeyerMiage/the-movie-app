@@ -19,15 +19,26 @@
     <fragment
         android:id="@+id/movie_home"
         android:name="fr.mbds.squad.movieapp.ui.movie.MovieFragment"
-        android:label="@+id/navigation_home_second_label">
+        android:label="@string/title_movies">
         <argument
             android:name="catName"
-            app:argType="string" />
-        <argument
-            android:name="catId"
-            app:argType="string" />
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_MovieFragment_to_MovieDetailFragment"
+            app:destination="@id/movie_detail" />
     </fragment>
 
+    <fragment
+        android:id="@+id/movie_detail"
+        android:name="fr.mbds.squad.movieapp.ui.movie.MovieDetailFragment"
+        android:label="@string/title_detail_movie">
+        <argument
+            android:name="movieId"
+            app:argType="string"/>
+        <argument
+            android:name="movieName"
+            app:argType="string"/>
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"

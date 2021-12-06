@@ -3,6 +3,7 @@ package fr.mbds.squad.movieapp.ui.movie
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import fr.mbds.squad.idbdata.data.Movie
@@ -33,6 +34,12 @@ class MovieAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
         val movie: Movie = items[position]
+
+        holder.itemView.setOnClickListener {
+            val action =
+                MovieFragmentDirections.actionMovieFragmentToMovieDetailFragment(items[position].id.toString(), items[position].name)
+            Navigation.findNavController(it).navigate(action)
+        }
 
         Picasso.get()
             .load(movie.poster)

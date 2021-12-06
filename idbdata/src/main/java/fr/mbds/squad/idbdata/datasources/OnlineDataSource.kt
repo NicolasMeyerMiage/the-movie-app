@@ -38,9 +38,9 @@ internal class OnlineDataSource(private val service: MovieService) {
         }
     }
 
-    suspend fun getMoviesByCatId(categoryId: String): Result<List<MovieResponse.Result>> {
+    suspend fun getMoviesByGenre(genre: String): Result<List<MovieResponse.Result>> {
         return safeCall {
-            val response = service.getMoviesByCatId(categoryId)
+            val response = service.getMoviesByGenre(genre)
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data.results)
                 is Result.Error -> result
@@ -50,7 +50,7 @@ internal class OnlineDataSource(private val service: MovieService) {
 
     suspend fun getMovieById(movieId: String): Result<MovieResponse.Result> {
         return safeCall {
-            val response = service.getMovieById(movieId)
+            val response = service.getMovieById(movieId.toInt())
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data)
                 is Result.Error -> result

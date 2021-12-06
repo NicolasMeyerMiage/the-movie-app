@@ -5,6 +5,7 @@ import fr.mbds.squad.idbdata.api.response.MovieResponse
 import fr.mbds.squad.idbdata.api.response.TokenResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 internal interface MovieService {
@@ -14,9 +15,9 @@ internal interface MovieService {
     @GET("genre/movie/list")
     suspend fun getCategories(): Response<CategoryResponse>
 
-    @GET("discover/movie")
-    suspend fun getMoviesByCatId(@Query("with_genres") genre: String): Response<MovieResponse>
+    @GET("discover/movie/")
+    suspend fun getMoviesByGenre(@Query("with_genres") genre: String): Response<MovieResponse>
 
-    @GET("movie")
-    suspend fun getMovieById(id: String): Response<MovieResponse.Result>
+    @GET("movie/{id}")
+    suspend fun getMovieById(@Path("id") id: Int): Response<MovieResponse.Result>
 }

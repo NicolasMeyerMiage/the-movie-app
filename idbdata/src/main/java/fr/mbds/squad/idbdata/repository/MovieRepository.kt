@@ -52,8 +52,8 @@ class MovieRepository : KoinComponent {
         }
     }
 
-    suspend fun getMoviesByCatId(categoryId: String): Result<List<Movie>> {
-        return when (val result = online.getMoviesByCatId(categoryId)) {
+    suspend fun getMoviesByGenre(genre: String): Result<List<Movie>> {
+        return when (val result = online.getMoviesByGenre(genre)) {
             is Result.Succes -> {
                 val results = result.data.map {
                     it.toMovie()
