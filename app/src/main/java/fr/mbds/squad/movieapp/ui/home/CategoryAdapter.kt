@@ -2,6 +2,7 @@ package fr.mbds.squad.movieapp.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import fr.mbds.squad.idbdata.data.Category
 import fr.mbds.squad.movieapp.databinding.CategoryItemListBinding
@@ -25,5 +26,10 @@ class CategoryAdapter(private val items: List<Category>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
+        holder.itemView.setOnClickListener {
+            val action =
+                HomeFragmentDirections.actionHomeFragmentToMovieFragment(position.toString(), items[position].name, items[position].id.toString())
+            findNavController(it).navigate(action)
+        }
     }
 }

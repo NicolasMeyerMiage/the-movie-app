@@ -12,22 +12,25 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/navigation_home_second" />
+            android:id="@+id/action_HomeFragment_to_MovieFragment"
+            app:destination="@id/movie_home" />
     </fragment>
-    <fragment
-        android:id="@+id/navigation_home_second"
-        android:name="fr.mbds.squad.movieapp.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
-        <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/navigation_home" />
 
+    <fragment
+        android:id="@+id/movie_home"
+        android:name="fr.mbds.squad.movieapp.ui.movie.MovieFragment"
+        android:label="@+id/navigation_home_second_label">
         <argument
             android:name="myArg"
             app:argType="string" />
+        <argument
+            android:name="myCat"
+            app:argType="string" />
+        <argument
+            android:name="catId"
+            app:argType="string" />
     </fragment>
+
 
     <fragment
         android:id="@+id/navigation_dashboard"
