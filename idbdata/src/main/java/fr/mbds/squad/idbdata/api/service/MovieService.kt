@@ -16,4 +16,7 @@ internal interface MovieService {
 
     @GET("discover/movie")
     suspend fun getMoviesByCatId(@Query("with_genres") genre: String): Response<MovieResponse>
+
+    @GET("movie")
+    suspend fun getMovieById(id: String): Response<MovieResponse.Result>
 }

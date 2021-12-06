@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName
 import fr.mbds.squad.idbdata.data.Movie
 
 internal data class MovieResponse(
-    // changer movies par results
     @SerializedName("results")
     val results: List<Result>,
 ) {

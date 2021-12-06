@@ -21,10 +21,7 @@
         android:name="fr.mbds.squad.movieapp.ui.movie.MovieFragment"
         android:label="@+id/navigation_home_second_label">
         <argument
-            android:name="myArg"
-            app:argType="string" />
-        <argument
-            android:name="myCat"
+            android:name="catName"
             app:argType="string" />
         <argument
             android:name="catId"

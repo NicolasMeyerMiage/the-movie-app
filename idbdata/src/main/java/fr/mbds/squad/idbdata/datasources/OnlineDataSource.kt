@@ -47,5 +47,15 @@ internal class OnlineDataSource(private val service: MovieService) {
             }
         }
     }
+
+    suspend fun getMovieById(movieId: String): Result<MovieResponse.Result> {
+        return safeCall {
+            val response = service.getMovieById(movieId)
+            when (val result = response.parse()) {
+                is Result.Succes -> Result.Succes(result.data)
+                is Result.Error -> result
+            }
+        }
+    }
 }
 
