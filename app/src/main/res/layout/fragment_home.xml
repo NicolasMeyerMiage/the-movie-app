@@ -8,5 +8,44 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.HomeFragment">
 
+        <ImageView
+            android:id="@+id/img_mbds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:srcCompat="@drawable/mbds"
+            android:layout_marginTop="20dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/img_mbds"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/app_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_description"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/app_title"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/img_ds4h"
+            android:layout_width="414dp"
+            android:layout_height="183dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/ds4h"
+            app:layout_constraintTop_toBottomOf="@id/app_description"
+            tools:ignore="MissingConstraints" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BestFlix</string>
+    <string name="app_title">Projet Kotlin - M2 MIAGE MBDS</string>
+    <string name="app_description">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard<br/>En apprendre plus sur AboutMe</string>
     <string name="next">Suivant</string>
     <string name="previous">Précédent</string>
     <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
@@ -14,5 +16,5 @@
     <string name="title_categorie">Catégorie</string>
     <string name="title_movies">Films</string>
     <string name="title_detail_movie">Film</string>
-    <string name="home_second">Home Second</string>
+    <string name="app_aboutme">A propos</string>
 </resources>
