@@ -16,5 +16,8 @@
     <string name="title_categorie">Catégorie</string>
     <string name="title_movies">Films</string>
     <string name="title_detail_movie">Film</string>
+    <string name="title_aboutme_home">A propos</string>
     <string name="app_aboutme">A propos</string>
+    <string name="aboutme_membre">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="aboutme_description">Dans ce projet, vous avez deux possibilités : Dans l\'onglet "<b>Films</b>", vous pouvez voir les catégories de films et voir les différents films dans ces catégories. Dans l\'onglet "<b>Show télés</b>", vous avez les mêmes possiblités !</string>
 </resources>

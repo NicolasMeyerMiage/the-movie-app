@@ -17,5 +17,8 @@
     <string name="title_categorie">Category</string>
     <string name="title_movies">Movies</string>
     <string name="title_detail_movie">Movie</string>
+    <string name="title_aboutme_home">About Us</string>
     <string name="app_aboutme">About us</string>
+    <string name="aboutme_membre">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="aboutme_description">In this project, you have two possibilities:In the "<b>Movies</b>" tab, you can see the movie categories and see the different movies in those categories. In the "<b>Show TV</b>" tab, you have the same possibilities!</string>
 </resources>

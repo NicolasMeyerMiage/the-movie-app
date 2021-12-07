@@ -12,6 +12,13 @@
         tools:layout="@layout/fragment_home">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_aboutme_home"
+        android:name="fr.mbds.squad.movieapp.ui.aboutme.AboutmeHomeFragment"
+        android:label="@string/title_aboutme_home"
+        tools:layout="@layout/fragment_aboutme_home">
+    </fragment>
+
     <!-- Navigation des films -->
     <fragment
         android:id="@+id/navigation_movie_home"
@@ -92,7 +99,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="fr.mbds.squad.movieapp.ui.notifications.NotificationsFragment"
+        android:name="fr.mbds.squad.movieapp.ui.aboutme.AboutmeHomeFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_aboutme_home" />
 </navigation>
