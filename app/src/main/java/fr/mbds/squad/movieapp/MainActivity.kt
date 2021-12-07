@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         // Charger les éléments principaux de la bottom bar
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_movie_home, R.id.navigation_tv_home, R.id.navigation_aboutme_home
+                R.id.navigation_movie_home, R.id.navigation_tv_home, R.id.navigation_about_home
             )
         )
         // Indiquer les éléments principaux de la bottom bar

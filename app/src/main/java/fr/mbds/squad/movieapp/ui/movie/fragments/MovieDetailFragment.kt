@@ -48,7 +48,7 @@ class MovieDetailFragment : Fragment() {
             movie.observe(
                 viewLifecycleOwner,
                 Observer {
-                    binding.movieDetailName.text = movie.value?.name
+                    binding.movieDetailName.text = movie.value?.name + " - " + movie.value?.vote + " / 10"
                     binding.movieDetailOverview.text = movie.value?.overview
                     Picasso.get()
                         .load(movie.value?.poster)

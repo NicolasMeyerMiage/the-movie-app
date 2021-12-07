@@ -3,8 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_about_navigation.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_movie_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_movie_navigation.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_trending_navigation.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_tv_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_tv_foreground.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/drawable/ic_tv_navigation.xml" value="0.22135416666666666" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/activity_main.xml" value="0.17239583333333333" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/actor_item_list.xml" value="0.1" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/category_item_list.xml" value="0.24010416666666667" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_about_home.xml" value="0.20520833333333333" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_aboutme_home.xml" value="0.2265625" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_dashboard.xml" value="0.115625" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
@@ -13,13 +24,17 @@
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_movie_detail.xml" value="0.20520833333333333" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_movie_home.xml" value="0.2171875" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_notifications.xml" value="0.17395833333333333" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_trending_home.xml" value="0.36666666666666664" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_tv.xml" value="0.27447916666666666" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_tv_detail.xml" value="0.27447916666666666" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_tv_home.xml" value="0.2864583333333333" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/movie_item.xml" value="0.20520833333333333" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/movie_item_list.xml" value="0.25407608695652173" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/trending_item_list.xml" value="0.36666666666666664" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/tv_item_list.xml" value="0.27447916666666666" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/mipmap-anydpi-v26/ic_movie.xml" value="0.22135416666666666" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/mipmap-anydpi-v26/ic_movie_round.xml" value="0.22135416666666666" />
         <entry key="..\:/Projects/M2/the-movie-app/app/src/main/res/layout/fragment_dashboard.xml" value="0.19114583333333332" />
         <entry key="..\:/Projects/M2/the-movie-app/app/src/main/res/layout/fragment_home.xml" value="0.19114583333333332" />
         <entry key="..\:/Projects/M2/the-movie-app/app/src/main/res/layout/fragment_home_second.xml" value="0.19114583333333332" />

@@ -15,7 +15,7 @@
     <string name="title_detail_movie">Movie</string>
 
     <!-- TV Shows -->
-    <string name="title_tv_home">Accueil - TVs shows</string>
+    <string name="title_tv_home">TVs shows</string>
     <string name="title_tv">TVs shows</string>
     <string name="title_detail_tv">TV show</string>
 
@@ -26,6 +26,10 @@
     <string name="title_about">About Us</string>
     <string name="about_membre">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
     <string name="about_description">In this project, you have two possibilities:In the "<b>Movies</b>" tab, you can see the movie categories and see the different movies in those categories. In the "<b>Show TV</b>" tab, you have the same possibilities!</string>
+
+    <!-- Trending -->
+    <string name="title_trending">Trending</string>
+    <string name="actor_trending_title">Fame actors for this week</string>
 
     <!-- Calls parameters -->
     <string name="rest_langage">en-US</string>

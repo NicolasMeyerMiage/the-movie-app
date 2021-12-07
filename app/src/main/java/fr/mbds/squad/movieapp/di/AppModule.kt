@@ -2,6 +2,7 @@ package fr.mbds.squad.movieapp.di
 
 import android.content.Context
 import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
+import fr.mbds.squad.movieapp.ui.trending.TrendingViewModel
 import fr.mbds.squad.movieapp.ui.tv.TvViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -21,11 +22,20 @@ val appModule = module {
         androidContext().getSharedPreferences("app_private", Context.MODE_PRIVATE)
     }
 
+    /**
+     * Gestion des views models.
+     * Rajoutez le view model ici à chaque création.
+     */
+
     viewModel {
         MovieViewModel(repository = get())
     }
 
     viewModel {
         TvViewModel(repository = get())
+    }
+
+    viewModel {
+        TrendingViewModel(repository = get())
     }
 }

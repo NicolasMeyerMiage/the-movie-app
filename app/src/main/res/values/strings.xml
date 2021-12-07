@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Accueil -->
     <string name="app_name">BestFlix</string>
@@ -14,9 +15,9 @@
     <string name="title_detail_movie">Film</string>
 
     <!-- Séries -->
-    <string name="title_tv_home">Accueil - Shows télés</string>
-    <string name="title_tv">Shows télés</string>
-    <string name="title_detail_tv">Show télé</string>
+    <string name="title_tv_home">Accueil - Séries télés</string>
+    <string name="title_tv">Séries télés</string>
+    <string name="title_detail_tv">Série télé</string>
 
     <!-- Films / Séries -->
     <string name="title_categorie">Catégorie</string>
@@ -25,6 +26,10 @@
     <string name="title_about">A propos</string>
     <string name="about_membre">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
     <string name="about_description">Dans ce projet, vous avez deux possibilités : Dans l\'onglet "<b>Films</b>", vous pouvez voir les catégories de films et voir les différents films dans ces catégories. Dans l\'onglet "<b>Show télés</b>", vous avez les mêmes possiblités !</string>
+
+    <!-- Tendances -->
+    <string name="title_trending">Tendances</string>
+    <string name="actor_trending_title">Acteurs en vogue cette semaine</string>
 
     <!-- Paramètrage appel -->
     <string name="rest_langage">fr-FR</string>

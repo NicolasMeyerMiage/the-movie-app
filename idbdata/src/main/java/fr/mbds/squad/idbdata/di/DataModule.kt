@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Room
 import fr.mbds.squad.idbdata.BuildConfig
 import fr.mbds.squad.idbdata.api.service.MovieService
+import fr.mbds.squad.idbdata.api.service.TrendingService
 import fr.mbds.squad.idbdata.api.service.TvService
 import fr.mbds.squad.idbdata.datasources.LocalDataSource
 import fr.mbds.squad.idbdata.datasources.OnlineMovieDataSource
+import fr.mbds.squad.idbdata.datasources.OnlineTrendingDataSource
 import fr.mbds.squad.idbdata.datasources.OnlineTvDataSource
 import fr.mbds.squad.idbdata.local.daos.TokenDao
 import fr.mbds.squad.idbdata.local.databases.IdbDataBase
 import fr.mbds.squad.idbdata.repository.MovieRepository
+import fr.mbds.squad.idbdata.repository.TrendingRepository
 import fr.mbds.squad.idbdata.repository.TvRepository
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -49,6 +52,15 @@ val dataModule = module {
     }
 
     single {
+        Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(get(named("BASE_URL")) as String)
+            .client(get())
+            .build()
+            .create(TrendingService::class.java)
+    }
+
+    single {
         LocalDataSource()
     }
 
@@ -61,11 +73,19 @@ val dataModule = module {
     }
 
     single {
+        OnlineTrendingDataSource(get())
+    }
+
+    single {
         MovieRepository()
     }
 
     single {
         TvRepository()
+    }
+
+    single {
+        TrendingRepository()
     }
 
     single {

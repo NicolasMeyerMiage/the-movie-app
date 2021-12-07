@@ -12,11 +12,12 @@
         tools:layout="@layout/fragment_home">
     </fragment>
 
+    <!-- Navigation about -->
     <fragment
-        android:id="@+id/navigation_aboutme_home"
-        android:name="fr.mbds.squad.movieapp.ui.aboutme.AboutmeHomeFragment"
+        android:id="@+id/navigation_about_home"
+        android:name="fr.mbds.squad.movieapp.ui.about.AboutHomeFragment"
         android:label="@string/title_about"
-        tools:layout="@layout/fragment_aboutme_home">
+        tools:layout="@layout/fragment_about_home">
     </fragment>
 
     <!-- Navigation des films -->
@@ -58,7 +59,7 @@
             app:argType="string"/>
     </fragment>
 
-    <!-- Navigation des shows télés -->
+    <!-- Navigation des séries télés -->
     <fragment
         android:id="@+id/navigation_tv_home"
         android:name="fr.mbds.squad.movieapp.ui.tv.fragments.TvHomeFragment"
@@ -82,7 +83,7 @@
             app:argType="string" />
         <action
             android:id="@+id/action_TvFragment_to_TvFragmentDetail"
-            app:destination="@id/movie_detail" />
+            app:destination="@id/tv_detail" />
     </fragment>
 
     <fragment
@@ -95,5 +96,13 @@
         <argument
             android:name="tvName"
             app:argType="string"/>
+    </fragment>
+
+    <!-- Navigation des tendances -->
+    <fragment
+        android:id="@+id/navigation_trending_home"
+        android:name="fr.mbds.squad.movieapp.ui.trending.fragments.TrendingHomeFragment"
+        android:label="@string/title_trending"
+        tools:layout="@layout/fragment_trending_home">
     </fragment>
 </navigation>

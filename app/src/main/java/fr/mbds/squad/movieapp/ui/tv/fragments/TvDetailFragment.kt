@@ -48,7 +48,7 @@ class TvDetailFragment : Fragment() {
             tv.observe(
                 viewLifecycleOwner,
                 Observer {
-                    binding.tvDetailName.text = tv.value?.name
+                    binding.tvDetailName.text = tv.value?.name + " - " + tv.value?.vote + " / 10"
                     binding.tvDetailOverview.text = tv.value?.overview
                     Picasso.get()
                         .load(tv.value?.poster)
