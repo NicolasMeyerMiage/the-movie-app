@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.home
+package fr.mbds.squad.movieapp.ui.movie.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,6 +6,7 @@ import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import fr.mbds.squad.idbdata.data.Category
 import fr.mbds.squad.movieapp.databinding.CategoryItemListBinding
+import fr.mbds.squad.movieapp.ui.movie.fragments.MovieHomeFragmentDirections
 
 class MovieCategoryAdapter(private val items: List<Category>) :
     RecyclerView.Adapter<MovieCategoryAdapter.ViewHolder>() {
@@ -28,7 +29,10 @@ class MovieCategoryAdapter(private val items: List<Category>) :
         holder.bind(items[position])
         holder.itemView.setOnClickListener {
             val action =
-                HomeFragmentDirections.actionHomeFragmentToMovieFragment(items[position].id.toString(), items[position].name)
+                MovieHomeFragmentDirections.actionMovieHomeFragmentToMovieFragment(
+                    items[position].id.toString(),
+                    items[position].name
+                )
             findNavController(it).navigate(action)
         }
     }

@@ -5,15 +5,22 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
-    <!-- Navigation des films -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="fr.mbds.squad.movieapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <!-- Navigation des films -->
+    <fragment
+        android:id="@+id/navigation_movie_home"
+        android:name="fr.mbds.squad.movieapp.ui.movie.fragments.MovieHomeFragment"
+        android:label="@string/title_movies"
+        tools:layout="@layout/fragment_movie_home">
 
         <action
-            android:id="@+id/action_HomeFragment_to_MovieFragment"
+            android:id="@+id/action_MovieHomeFragment_to_MovieFragment"
             app:destination="@id/movie_home" />
     </fragment>
 

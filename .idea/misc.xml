@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/activity_main.xml" value="0.17239583333333333" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/category_item_list.xml" value="0.24010416666666667" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_dashboard.xml" value="0.115625" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_home_second.xml" value="0.1" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_movie.xml" value="0.25407608695652173" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_movie_detail.xml" value="0.20520833333333333" />
+        <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_movie_home.xml" value="0.2171875" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_notifications.xml" value="0.17395833333333333" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_tv.xml" value="0.27447916666666666" />
         <entry key="..\:/PFD/Git/nmeyer/the-movie-app/app/src/main/res/layout/fragment_tv_detail.xml" value="0.27447916666666666" />

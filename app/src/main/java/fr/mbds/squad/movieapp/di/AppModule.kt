@@ -1,7 +1,6 @@
 package fr.mbds.squad.movieapp.di
 
 import android.content.Context
-import fr.mbds.squad.movieapp.ui.home.HomeViewModel
 import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
 import fr.mbds.squad.movieapp.ui.tv.TvViewModel
 import org.koin.android.ext.koin.androidContext
@@ -20,10 +19,6 @@ val appModule = module {
 
     single(named("APP_PREFS")) {
         androidContext().getSharedPreferences("app_private", Context.MODE_PRIVATE)
-    }
-
-    viewModel {
-        HomeViewModel(repository = get())
     }
 
     viewModel {
