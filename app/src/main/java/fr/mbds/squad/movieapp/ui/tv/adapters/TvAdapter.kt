@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.tv
+package fr.mbds.squad.movieapp.ui.tv.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import fr.mbds.squad.idbdata.data.Tv
 import fr.mbds.squad.movieapp.databinding.TvItemListBinding
+import fr.mbds.squad.movieapp.ui.tv.fragments.TvFragmentDirections
 
 class TvAdapter(
     private val items: List<Tv>

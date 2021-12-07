@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.movie
+package fr.mbds.squad.movieapp.ui.movie.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import fr.mbds.squad.idbdata.data.Movie
 import fr.mbds.squad.movieapp.databinding.MovieItemListBinding
+import fr.mbds.squad.movieapp.ui.movie.fragments.MovieFragmentDirections
 
 class MovieAdapter(
     private val items: List<Movie>
@@ -36,7 +37,10 @@ class MovieAdapter(
 
         holder.itemView.setOnClickListener {
             val action =
-                MovieFragmentDirections.actionMovieFragmentToMovieDetailFragment(items[position].id.toString(), items[position].name)
+                MovieFragmentDirections.actionMovieFragmentToMovieDetailFragment(
+                    items[position].id.toString(),
+                    items[position].name
+                )
             Navigation.findNavController(it).navigate(action)
         }
 

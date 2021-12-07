@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tv.TvHomeFragment">
+        tools:context=".ui.tv.fragments.TvHomeFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/category_tv_list"

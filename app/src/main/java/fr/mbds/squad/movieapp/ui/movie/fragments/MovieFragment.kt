@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.movie
+package fr.mbds.squad.movieapp.ui.movie.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import fr.mbds.squad.movieapp.R
 import fr.mbds.squad.movieapp.databinding.FragmentMovieBinding
+import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
+import fr.mbds.squad.movieapp.ui.movie.adapters.MovieAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MovieFragment : Fragment() {

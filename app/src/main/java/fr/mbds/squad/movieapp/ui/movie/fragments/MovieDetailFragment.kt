@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.movie
+package fr.mbds.squad.movieapp.ui.movie.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,13 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import fr.mbds.squad.movieapp.R
 import fr.mbds.squad.movieapp.databinding.FragmentMovieDetailBinding
+import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MovieDetailFragment : Fragment() {
     private val movieViewModel: MovieViewModel by viewModel()
     private val args: MovieDetailFragmentArgs by navArgs()
     private lateinit var binding: FragmentMovieDetailBinding
-
 
     override fun onCreateView(
         inflater: LayoutInflater,

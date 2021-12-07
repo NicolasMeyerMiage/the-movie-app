@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tv.TvDetailFragment">
+        tools:context=".ui.tv.fragments.TvDetailFragment">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/tv_detail_poster"
