@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import fr.mbds.squad.idbdata.data.Category
 import fr.mbds.squad.movieapp.databinding.CategoryItemListBinding
 
-class CategoryAdapter(private val items: List<Category>) :
-    RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+class MovieCategoryAdapter(private val items: List<Category>) :
+    RecyclerView.Adapter<MovieCategoryAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: CategoryItemListBinding) :
         RecyclerView.ViewHolder(binding.root) {

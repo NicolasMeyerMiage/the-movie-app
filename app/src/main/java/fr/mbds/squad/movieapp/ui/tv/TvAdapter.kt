@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.movie
+package fr.mbds.squad.movieapp.ui.tv
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,27 +6,27 @@ import android.widget.ImageView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import fr.mbds.squad.idbdata.data.Movie
-import fr.mbds.squad.movieapp.databinding.MovieItemListBinding
+import fr.mbds.squad.idbdata.data.Tv
+import fr.mbds.squad.movieapp.databinding.TvItemListBinding
 
-class MovieAdapter(
-    private val items: List<Movie>
+class TvAdapter(
+    private val items: List<Tv>
 ) :
-    RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+    RecyclerView.Adapter<TvAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: MovieItemListBinding) :
+    inner class ViewHolder(private val binding: TvItemListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        val posterMovie: ImageView = binding.moviePoster
+        val posterTv: ImageView = binding.tvPoster
 
-        fun bind(item: Movie) {
+        fun bind(item: Tv) {
             binding.item = item
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return ViewHolder(MovieItemListBinding.inflate(inflater, parent, false))
+        return ViewHolder(TvItemListBinding.inflate(inflater, parent, false))
     }
 
     override fun getItemCount(): Int = items.size
@@ -36,14 +36,17 @@ class MovieAdapter(
 
         holder.itemView.setOnClickListener {
             val action =
-                MovieFragmentDirections.actionMovieFragmentToMovieDetailFragment(items[position].id.toString(), items[position].name)
+                TvFragmentDirections.actionTvFragmentToTvFragmentDetail(
+                    items[position].id.toString(),
+                    items[position].name
+                )
             Navigation.findNavController(it).navigate(action)
         }
 
-        val movie: Movie = items[position]
+        val tv: Tv = items[position]
 
         Picasso.get()
-            .load(movie.poster)
-            .into(holder.posterMovie)
+            .load(tv.poster)
+            .into(holder.posterTv)
     }
 }

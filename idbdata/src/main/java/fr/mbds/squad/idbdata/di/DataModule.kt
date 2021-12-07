@@ -4,11 +4,14 @@ import android.content.Context
 import androidx.room.Room
 import fr.mbds.squad.idbdata.BuildConfig
 import fr.mbds.squad.idbdata.api.service.MovieService
+import fr.mbds.squad.idbdata.api.service.TvService
 import fr.mbds.squad.idbdata.datasources.LocalDataSource
-import fr.mbds.squad.idbdata.datasources.OnlineDataSource
+import fr.mbds.squad.idbdata.datasources.OnlineMovieDataSource
+import fr.mbds.squad.idbdata.datasources.OnlineTvDataSource
 import fr.mbds.squad.idbdata.local.daos.TokenDao
 import fr.mbds.squad.idbdata.local.databases.IdbDataBase
 import fr.mbds.squad.idbdata.repository.MovieRepository
+import fr.mbds.squad.idbdata.repository.TvRepository
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -26,6 +29,7 @@ val dataModule = module {
             dao = get()
         )
     }
+
     single {
         Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
@@ -36,15 +40,32 @@ val dataModule = module {
     }
 
     single {
+        Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(get(named("BASE_URL")) as String)
+            .client(get())
+            .build()
+            .create(TvService::class.java)
+    }
+
+    single {
         LocalDataSource()
     }
 
     single {
-        OnlineDataSource(get())
+        OnlineMovieDataSource(get())
+    }
+
+    single {
+        OnlineTvDataSource(get())
     }
 
     single {
         MovieRepository()
+    }
+
+    single {
+        TvRepository()
     }
 
     single {

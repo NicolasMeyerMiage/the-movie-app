@@ -3,6 +3,7 @@ package fr.mbds.squad.movieapp.di
 import android.content.Context
 import fr.mbds.squad.movieapp.ui.home.HomeViewModel
 import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
+import fr.mbds.squad.movieapp.ui.tv.TvViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
@@ -22,10 +23,14 @@ val appModule = module {
     }
 
     viewModel {
+        HomeViewModel(repository = get())
+    }
+
+    viewModel {
         MovieViewModel(repository = get())
     }
 
     viewModel {
-        HomeViewModel(repository = get())
+        TvViewModel(repository = get())
     }
 }

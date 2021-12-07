@@ -30,7 +30,8 @@ class MovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_movies) + " - " + args.catName
+        (activity as AppCompatActivity).supportActionBar?.title =
+            getString(R.string.title_movies) + " - " + args.catName
 
         with(movieViewModel) {
             token.observe(

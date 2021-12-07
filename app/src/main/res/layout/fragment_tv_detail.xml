@@ -6,16 +6,16 @@
     <data>
         <variable
             name="item"
-            type="fr.mbds.squad.idbdata.data.Movie" />
+            type="fr.mbds.squad.idbdata.data.Tv" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.movie.MovieDetailFragment">
+        tools:context=".ui.tv.TvDetailFragment">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/movie_detail_poster"
+            android:id="@+id/tv_detail_poster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher_background"
@@ -27,29 +27,29 @@
             app:layout_constraintVertical_bias="0.077" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/movie_detail_name"
+            android:id="@+id/tv_detail_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:text="@{item.name}"
-            app:layout_constraintTop_toBottomOf="@id/movie_detail_poster"
-            app:layout_constraintEnd_toEndOf="@id/movie_detail_poster"
-            app:layout_constraintStart_toStartOf="@id/movie_detail_poster"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_poster"
+            app:layout_constraintEnd_toEndOf="@id/tv_detail_poster"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_poster"
             android:layout_marginTop="20dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/movie_detail_overview"
+            android:id="@+id/tv_detail_overview"
             android:layout_width="262dp"
             android:layout_height="142dp"
             android:layout_marginTop="20dp"
             android:textColor="@android:color/black"
             android:gravity="center"
             android:text="@{item.overview}"
-            app:layout_constraintEnd_toEndOf="@id/movie_detail_name"
-            app:layout_constraintStart_toStartOf="@id/movie_detail_name"
-            app:layout_constraintTop_toBottomOf="@id/movie_detail_name" />
+            app:layout_constraintEnd_toEndOf="@id/tv_detail_name"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

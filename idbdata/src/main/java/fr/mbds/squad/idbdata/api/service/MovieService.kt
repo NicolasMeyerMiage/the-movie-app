@@ -13,7 +13,7 @@ internal interface MovieService {
     suspend fun getToken(): Response<TokenResponse>
 
     @GET("genre/movie/list")
-    suspend fun getCategories(): Response<CategoryResponse>
+    suspend fun getMovieCategories(): Response<CategoryResponse>
 
     @GET("discover/movie")
     suspend fun getMoviesByCategoryId(@Query("with_genres") categoryId: String): Response<MovieResponse>

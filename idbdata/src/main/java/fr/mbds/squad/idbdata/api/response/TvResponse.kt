@@ -1,20 +1,20 @@
 package fr.mbds.squad.idbdata.api.response
 
 import com.google.gson.annotations.SerializedName
-import fr.mbds.squad.idbdata.data.Movie
+import fr.mbds.squad.idbdata.data.Tv
 
-internal data class MovieResponse(
+internal data class TvResponse(
     @SerializedName("results")
     val results: List<Result>,
 ) {
     data class Result(
         @SerializedName("id")
         val id: Int,
-        @SerializedName("original_title")
+        @SerializedName("name")
         val name: String,
         @SerializedName("vote_average")
         val vote: String,
-        @SerializedName("release_date")
+        @SerializedName("first_air_date")
         val date: String,
         @SerializedName("backdrop_path")
         val poster: String,
@@ -23,7 +23,7 @@ internal data class MovieResponse(
     )
 }
 
-internal fun MovieResponse.Result.toMovie() = Movie(
+internal fun TvResponse.Result.toTv() = Tv(
     id = id,
     name = name,
     vote = vote,

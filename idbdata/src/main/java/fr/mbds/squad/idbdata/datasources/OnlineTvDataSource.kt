@@ -1,9 +1,9 @@
 package fr.mbds.squad.idbdata.datasources
 
 import fr.mbds.squad.idbdata.api.response.CategoryResponse
-import fr.mbds.squad.idbdata.api.response.MovieResponse
 import fr.mbds.squad.idbdata.api.response.TokenResponse
-import fr.mbds.squad.idbdata.api.service.MovieService
+import fr.mbds.squad.idbdata.api.response.TvResponse
+import fr.mbds.squad.idbdata.api.service.TvService
 import fr.mbds.squad.idbdata.utils.Result
 import parse
 import safeCall
@@ -13,7 +13,7 @@ import safeCall
  * Cette classe est interne au module, ne peut être initialisé ou exposé aux autres composants
  * de l'application
  */
-internal class OnlineDataSource(private val service: MovieService) {
+internal class OnlineTvDataSource(private val serviceTv: TvService) {
 
     /**
      * Récupérer le token du serveur
@@ -23,14 +23,19 @@ internal class OnlineDataSource(private val service: MovieService) {
      */
     suspend fun getToken(): Result<TokenResponse> {
         return safeCall {
-            val response = service.getToken()
+            val response = serviceTv.getToken()
             response.parse()
         }
     }
 
-    suspend fun getCategories(): Result<List<CategoryResponse.Genre>> {
+    /**
+     * Liste des services gérant les shows télés
+     * Si [Result.Succes], tout s'est bien passé
+     * Sinon, une erreur est survenue
+     */
+    suspend fun getTvCategories(): Result<List<CategoryResponse.Genre>> {
         return safeCall {
-            val response = service.getCategories()
+            val response = serviceTv.getTvCategories()
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data.genres)
                 is Result.Error -> result
@@ -38,9 +43,9 @@ internal class OnlineDataSource(private val service: MovieService) {
         }
     }
 
-    suspend fun getMoviesByCategoryId(categoryId: String): Result<List<MovieResponse.Result>> {
+    suspend fun getTvsByCategoryId(categoryId: String): Result<List<TvResponse.Result>> {
         return safeCall {
-            val response = service.getMoviesByCategoryId(categoryId)
+            val response = serviceTv.getTvsByCategoryId(categoryId)
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data.results)
                 is Result.Error -> result
@@ -48,9 +53,9 @@ internal class OnlineDataSource(private val service: MovieService) {
         }
     }
 
-    suspend fun getMovieById(movieId: String): Result<MovieResponse.Result> {
+    suspend fun getTvById(tvId: String): Result<TvResponse.Result> {
         return safeCall {
-            val response = service.getMovieById(movieId.toInt())
+            val response = serviceTv.getTvById(tvId.toInt())
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data)
                 is Result.Error -> result
@@ -58,4 +63,3 @@ internal class OnlineDataSource(private val service: MovieService) {
         }
     }
 }
-

@@ -5,6 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+    <!-- Navigation des films -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="fr.mbds.squad.movieapp.ui.home.HomeFragment"
@@ -43,11 +44,44 @@
             app:argType="string"/>
     </fragment>
 
+    <!-- Navigation des shows télés -->
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="fr.mbds.squad.movieapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_tv_home"
+        android:name="fr.mbds.squad.movieapp.ui.tv.TvHomeFragment"
+        android:label="@string/title_tv_home"
+        tools:layout="@layout/fragment_tv_home">
+
+        <action
+            android:id="@+id/action_TvHomeFragment_to_TvFragment"
+            app:destination="@id/tv_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tv_list"
+        android:name="fr.mbds.squad.movieapp.ui.tv.TvFragment"
+        android:label="@string/title_tv">
+        <argument
+            android:name="catId"
+            app:argType="string" />
+        <argument
+            android:name="catName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_TvFragment_to_TvFragmentDetail"
+            app:destination="@id/movie_detail" />
+    </fragment>
+
+    <!--<fragment
+        android:id="@+id/tv_detail"
+        android:name="fr.mbds.squad.movieapp.ui.tv.TvDetailFragment"
+        android:label="@string/title_detail_tv">
+        <argument
+            android:name="tvId"
+            app:argType="string"/>
+        <argument
+            android:name="tvName"
+            app:argType="string"/>
+    </fragment>-->
 
     <fragment
         android:id="@+id/navigation_notifications"
