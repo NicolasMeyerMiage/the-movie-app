@@ -43,9 +43,9 @@ internal class OnlineTvDataSource(private val serviceTv: TvService) {
         }
     }
 
-    suspend fun getTvsByCategoryId(categoryId: String): Result<List<TvResponse.Result>> {
+    suspend fun getTvsByCategoryId(categoryId: String, language: String): Result<List<TvResponse.Result>> {
         return safeCall {
-            val response = serviceTv.getTvsByCategoryId(categoryId)
+            val response = serviceTv.getTvsByCategoryId(categoryId, language)
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data.results)
                 is Result.Error -> result
@@ -53,9 +53,9 @@ internal class OnlineTvDataSource(private val serviceTv: TvService) {
         }
     }
 
-    suspend fun getTvById(tvId: String): Result<TvResponse.Result> {
+    suspend fun getTvById(tvId: String, language: String): Result<TvResponse.Result> {
         return safeCall {
-            val response = serviceTv.getTvById(tvId.toInt())
+            val response = serviceTv.getTvById(tvId.toInt(), language)
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data)
                 is Result.Error -> result

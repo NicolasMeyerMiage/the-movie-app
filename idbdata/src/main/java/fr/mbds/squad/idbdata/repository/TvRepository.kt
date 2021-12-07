@@ -50,8 +50,8 @@ class TvRepository : KoinComponent {
         }
     }
 
-    suspend fun getTvsByCategoryId(categoryId: String): Result<List<Tv>> {
-        return when (val result = online.getTvsByCategoryId(categoryId)) {
+    suspend fun getTvsByCategoryId(categoryId: String, language: String): Result<List<Tv>> {
+        return when (val result = online.getTvsByCategoryId(categoryId, language)) {
             is Result.Succes -> {
                 val results = result.data.map {
                     it.toTv()
@@ -62,8 +62,8 @@ class TvRepository : KoinComponent {
         }
     }
 
-    suspend fun getTvById(tvId: String): Result<Tv> {
-        return when (val result = online.getTvById(tvId)) {
+    suspend fun getTvById(tvId: String, language: String): Result<Tv> {
+        return when (val result = online.getTvById(tvId, language)) {
             is Result.Succes -> {
                 val result = result.data.toTv()
                 Result.Succes(result)

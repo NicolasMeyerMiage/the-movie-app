@@ -60,9 +60,9 @@ class TvViewModel(private val repository: TvRepository) : ViewModel() {
         }
     }
 
-    fun getTvsByCategoryId(categoryId: String) {
+    fun getTvsByCategoryId(categoryId: String, language: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            when (val result = repository.getTvsByCategoryId(categoryId)) {
+            when (val result = repository.getTvsByCategoryId(categoryId, language)) {
                 is Result.Succes -> {
                     _tvs.postValue(result.data)
                 }
@@ -73,9 +73,9 @@ class TvViewModel(private val repository: TvRepository) : ViewModel() {
         }
     }
 
-    fun getTvById(tvId: String) {
+    fun getTvById(tvId: String, language: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            when (val result = repository.getTvById(tvId)) {
+            when (val result = repository.getTvById(tvId, language)) {
                 is Result.Succes -> {
                     _tv.postValue(result.data)
                 }

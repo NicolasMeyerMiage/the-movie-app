@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Home -->
     <string name="app_name">BestFlix</string>
     <string name="app_title">Kotlin project - M2 MIAGE MBDS</string>
     <string name="app_description">Group\'s project - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard<br/>Learn more from AboutMe</string>
+    <string name="title_home">Home</string>
+
+    <!-- Navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="hello_dashboard_second">Hello DashboardSecondFragment. Arg: %1$s</string>
-    <string name="hello_notifications_second">Hello NotificationsSecondFragment. Arg: %1$s</string>
-    <string name="title_home">Home</string>
+
+    <!-- Movies -->
+    <string name="title_movies">Movies</string>
+    <string name="title_detail_movie">Movie</string>
+
+    <!-- TV Shows -->
     <string name="title_tv_home">Accueil - TVs shows</string>
     <string name="title_tv">TVs shows</string>
     <string name="title_detail_tv">TV show</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <!-- Movies / TVs Shows -->
     <string name="title_categorie">Category</string>
-    <string name="title_movies">Movies</string>
-    <string name="title_detail_movie">Movie</string>
-    <string name="title_aboutme_home">About Us</string>
-    <string name="app_aboutme">About us</string>
-    <string name="aboutme_membre">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
-    <string name="aboutme_description">In this project, you have two possibilities:In the "<b>Movies</b>" tab, you can see the movie categories and see the different movies in those categories. In the "<b>Show TV</b>" tab, you have the same possibilities!</string>
+
+    <!-- About -->
+    <string name="title_about">About Us</string>
+    <string name="about_membre">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="about_description">In this project, you have two possibilities:In the "<b>Movies</b>" tab, you can see the movie categories and see the different movies in those categories. In the "<b>Show TV</b>" tab, you have the same possibilities!</string>
+
+    <!-- Calls parameters -->
+    <string name="rest_langage">en-US</string>
 </resources>

@@ -3,9 +3,7 @@ package fr.mbds.squad.idbdata.datasources
 import fr.mbds.squad.idbdata.api.response.CategoryResponse
 import fr.mbds.squad.idbdata.api.response.MovieResponse
 import fr.mbds.squad.idbdata.api.response.TokenResponse
-import fr.mbds.squad.idbdata.api.response.TvResponse
 import fr.mbds.squad.idbdata.api.service.MovieService
-import fr.mbds.squad.idbdata.api.service.TvService
 import fr.mbds.squad.idbdata.utils.Result
 import parse
 import safeCall
@@ -45,9 +43,9 @@ internal class OnlineMovieDataSource(private val serviceMovie: MovieService) {
         }
     }
 
-    suspend fun getMoviesByCategoryId(categoryId: String): Result<List<MovieResponse.Result>> {
+    suspend fun getMoviesByCategoryId(categoryId: String, language: String): Result<List<MovieResponse.Result>> {
         return safeCall {
-            val response = serviceMovie.getMoviesByCategoryId(categoryId)
+            val response = serviceMovie.getMoviesByCategoryId(categoryId, language)
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data.results)
                 is Result.Error -> result
@@ -55,9 +53,9 @@ internal class OnlineMovieDataSource(private val serviceMovie: MovieService) {
         }
     }
 
-    suspend fun getMovieById(movieId: String): Result<MovieResponse.Result> {
+    suspend fun getMovieById(movieId: String, language: String): Result<MovieResponse.Result> {
         return safeCall {
-            val response = serviceMovie.getMovieById(movieId.toInt())
+            val response = serviceMovie.getMovieById(movieId.toInt(), language)
             when (val result = response.parse()) {
                 is Result.Succes -> Result.Succes(result.data)
                 is Result.Error -> result

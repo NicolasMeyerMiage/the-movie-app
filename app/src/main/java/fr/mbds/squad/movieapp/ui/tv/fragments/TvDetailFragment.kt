@@ -1,21 +1,16 @@
 package fr.mbds.squad.movieapp.ui.tv.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.squareup.picasso.Picasso
 import fr.mbds.squad.movieapp.R
-import fr.mbds.squad.movieapp.databinding.FragmentMovieDetailBinding
 import fr.mbds.squad.movieapp.databinding.FragmentTvDetailBinding
-import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
-import fr.mbds.squad.movieapp.ui.tv.TvDetailFragmentArgs
 import fr.mbds.squad.movieapp.ui.tv.TvViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -42,7 +37,12 @@ class TvDetailFragment : Fragment() {
             token.observe(
                 viewLifecycleOwner,
                 Observer {
-                    getTvById(args.tvId)
+                    getTvById(
+                        args.tvId,
+                        getString(
+                            R.string.rest_langage
+                        )
+                    )
                 }
             )
             tv.observe(

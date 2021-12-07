@@ -60,9 +60,9 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         }
     }
 
-    fun getMoviesByCategoryId(categoryId: String) {
+    fun getMoviesByCategoryId(categoryId: String, language: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            when (val result = repository.getMoviesByCategoryId(categoryId)) {
+            when (val result = repository.getMoviesByCategoryId(categoryId, language)) {
                 is Result.Succes -> {
                     _movies.postValue(result.data)
                 }
@@ -73,9 +73,9 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         }
     }
 
-    fun getMovieById(movieId: String) {
+    fun getMovieById(movieId: String, language: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            when (val result = repository.getMovieById(movieId)) {
+            when (val result = repository.getMovieById(movieId, language)) {
                 is Result.Succes -> {
                     _movie.postValue(result.data)
                 }

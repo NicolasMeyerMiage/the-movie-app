@@ -39,7 +39,12 @@ class TvFragment : Fragment() {
             token.observe(
                 viewLifecycleOwner,
                 Observer {
-                    getTvsByCategoryId(args.catId)
+                    getTvsByCategoryId(
+                        args.catId,
+                        getString(
+                            R.string.rest_langage
+                        )
+                    )
                 }
             )
             tvs.observe(

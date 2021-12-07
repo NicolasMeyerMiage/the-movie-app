@@ -1,23 +1,31 @@
 <resources>
+    <!-- Accueil -->
     <string name="app_name">BestFlix</string>
     <string name="app_title">Projet Kotlin - M2 MIAGE MBDS</string>
     <string name="app_description">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard<br/>En apprendre plus sur AboutMe</string>
+    <string name="title_home">Accueil</string>
+
+    <!-- Navigation -->
     <string name="next">Suivant</string>
     <string name="previous">Précédent</string>
-    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="hello_dashboard_second">Hello DashboardSecondFragment. Arg: %1$s</string>
-    <string name="hello_notifications_second">Hello NotificationsSecondFragment. Arg: %1$s</string>
-    <string name="title_home">Accueil</string>
+
+    <!-- Films -->
+    <string name="title_movies">Films</string>
+    <string name="title_detail_movie">Film</string>
+
+    <!-- Séries -->
     <string name="title_tv_home">Accueil - Shows télés</string>
     <string name="title_tv">Shows télés</string>
     <string name="title_detail_tv">Show télé</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <!-- Films / Séries -->
     <string name="title_categorie">Catégorie</string>
-    <string name="title_movies">Films</string>
-    <string name="title_detail_movie">Film</string>
-    <string name="title_aboutme_home">A propos</string>
-    <string name="app_aboutme">A propos</string>
-    <string name="aboutme_membre">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
-    <string name="aboutme_description">Dans ce projet, vous avez deux possibilités : Dans l\'onglet "<b>Films</b>", vous pouvez voir les catégories de films et voir les différents films dans ces catégories. Dans l\'onglet "<b>Show télés</b>", vous avez les mêmes possiblités !</string>
+
+    <!-- A propos -->
+    <string name="title_about">A propos</string>
+    <string name="about_membre">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="about_description">Dans ce projet, vous avez deux possibilités : Dans l\'onglet "<b>Films</b>", vous pouvez voir les catégories de films et voir les différents films dans ces catégories. Dans l\'onglet "<b>Show télés</b>", vous avez les mêmes possiblités !</string>
+
+    <!-- Paramètrage appel -->
+    <string name="rest_langage">fr-FR</string>
 </resources>

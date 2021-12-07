@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/navigation_aboutme_home"
         android:name="fr.mbds.squad.movieapp.ui.aboutme.AboutmeHomeFragment"
-        android:label="@string/title_aboutme_home"
+        android:label="@string/title_about"
         tools:layout="@layout/fragment_aboutme_home">
     </fragment>
 
@@ -87,7 +87,7 @@
 
     <fragment
         android:id="@+id/tv_detail"
-        android:name="fr.mbds.squad.movieapp.ui.tv.TvDetailFragment"
+        android:name="fr.mbds.squad.movieapp.ui.tv.fragments.TvDetailFragment"
         android:label="@string/title_detail_tv">
         <argument
             android:name="tvId"
@@ -96,10 +96,4 @@
             android:name="tvName"
             app:argType="string"/>
     </fragment>
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="fr.mbds.squad.movieapp.ui.aboutme.AboutmeHomeFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_aboutme_home" />
 </navigation>

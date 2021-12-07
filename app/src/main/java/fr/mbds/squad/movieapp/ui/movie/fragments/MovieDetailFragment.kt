@@ -1,11 +1,9 @@
 package fr.mbds.squad.movieapp.ui.movie.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -39,7 +37,12 @@ class MovieDetailFragment : Fragment() {
             token.observe(
                 viewLifecycleOwner,
                 Observer {
-                    getMovieById(args.movieId)
+                    getMovieById(
+                        args.movieId,
+                        getString(
+                            R.string.rest_langage
+                        )
+                    )
                 }
             )
             movie.observe(

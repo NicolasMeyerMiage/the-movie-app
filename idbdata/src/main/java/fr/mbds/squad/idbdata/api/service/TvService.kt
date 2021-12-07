@@ -16,8 +16,8 @@ internal interface TvService {
     suspend fun getTvCategories(): Response<CategoryResponse>
 
     @GET("discover/tv")
-    suspend fun getTvsByCategoryId(@Query("with_genres") categoryId: String): Response<TvResponse>
+    suspend fun getTvsByCategoryId(@Query("with_genres") categoryId: String, @Query("language") language: String): Response<TvResponse>
 
     @GET("tv/{id}")
-    suspend fun getTvById(@Path("id") id: Int): Response<TvResponse.Result>
+    suspend fun getTvById(@Path("id") id: Int, @Query("language") language: String): Response<TvResponse.Result>
 }
