@@ -1,4 +1,4 @@
-package fr.mbds.squad.movieapp.ui.movie.fragments
+package fr.mbds.squad.movieapp.ui.tv.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -13,43 +13,46 @@ import androidx.navigation.fragment.navArgs
 import com.squareup.picasso.Picasso
 import fr.mbds.squad.movieapp.R
 import fr.mbds.squad.movieapp.databinding.FragmentMovieDetailBinding
+import fr.mbds.squad.movieapp.databinding.FragmentTvDetailBinding
 import fr.mbds.squad.movieapp.ui.movie.MovieViewModel
+import fr.mbds.squad.movieapp.ui.tv.TvDetailFragmentArgs
+import fr.mbds.squad.movieapp.ui.tv.TvViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MovieDetailFragment : Fragment() {
-    private val movieViewModel: MovieViewModel by viewModel()
-    private val args: MovieDetailFragmentArgs by navArgs()
-    private lateinit var binding: FragmentMovieDetailBinding
+class TvDetailFragment : Fragment() {
+    private val tvViewModel: TvViewModel by viewModel()
+    private val args: TvDetailFragmentArgs by navArgs()
+    private lateinit var binding: FragmentTvDetailBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMovieDetailBinding.inflate(inflater, container, false)
+        binding = FragmentTvDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.title = getString(
-            R.string.title_detail_movie
-        ) + " - " + args.movieName
-        with(movieViewModel) {
+            R.string.title_detail_tv
+        ) + " - " + args.tvName
+        with(tvViewModel) {
             token.observe(
                 viewLifecycleOwner,
                 Observer {
-                    getMovieById(args.movieId)
+                    getTvById(args.tvId)
                 }
             )
-            movie.observe(
+            tv.observe(
                 viewLifecycleOwner,
                 Observer {
-                    binding.movieDetailName.text = movie.value?.name
-                    binding.movieDetailOverview.text = movie.value?.overview
+                    binding.tvDetailName.text = tv.value?.name
+                    binding.tvDetailOverview.text = tv.value?.overview
                     Picasso.get()
-                        .load(movie.value?.poster)
-                        .into(binding.movieDetailPoster)
+                        .load(tv.value?.poster)
+                        .into(binding.tvDetailPoster)
                 }
             )
             error.observe(

@@ -85,7 +85,7 @@
             app:destination="@id/movie_detail" />
     </fragment>
 
-    <!--<fragment
+    <fragment
         android:id="@+id/tv_detail"
         android:name="fr.mbds.squad.movieapp.ui.tv.TvDetailFragment"
         android:label="@string/title_detail_tv">
@@ -95,7 +95,7 @@
         <argument
             android:name="tvName"
             app:argType="string"/>
-    </fragment>-->
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
