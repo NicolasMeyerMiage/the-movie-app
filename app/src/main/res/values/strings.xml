@@ -25,7 +25,12 @@
     <!-- A propos -->
     <string name="title_about">A propos</string>
     <string name="about_membre">Projet Groupe - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
-    <string name="about_description">Dans ce projet, vous avez deux possibilités : Dans l\'onglet "<b>Films</b>", vous pouvez voir les catégories de films et voir les différents films dans ces catégories. Dans l\'onglet "<b>Show télés</b>", vous avez les mêmes possiblités !</string>
+    <string name="about_description">
+        Dans ce projet, vous avez deux possibilités :
+        Dans le menu "<b>Films</b>", vous pouvez voir les catégories de films et voir les différents films dans ces catégories.
+        Dans le menu "<b>Séries télés</b>", vous avez les mêmes possiblités !
+        Et enfin, dans le menu "<b>Tendances</b>", découvrez les acteurs fames de la semaine ❤
+    </string>
 
     <!-- Tendances -->
     <string name="title_trending">Tendances</string>

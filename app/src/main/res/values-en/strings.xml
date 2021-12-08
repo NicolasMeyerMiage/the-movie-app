@@ -25,7 +25,12 @@
     <!-- About -->
     <string name="title_about">About Us</string>
     <string name="about_membre">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
-    <string name="about_description">In this project, you have two possibilities:In the "<b>Movies</b>" tab, you can see the movie categories and see the different movies in those categories. In the "<b>Show TV</b>" tab, you have the same possibilities!</string>
+    <string name="about_description">
+        In this project, you have two options:
+        In the "<b>Movies</b>" menu, you can see the movie categories and view the individual movies in those categories.
+        In the "<b>Show TV</b>" menu, you have the same possibilities!
+        And finally, in the menu "<b>Trends</b>", discover the fam actors of the week ❤
+    </string>
 
     <!-- Trending -->
     <string name="title_trending">Trending</string>
