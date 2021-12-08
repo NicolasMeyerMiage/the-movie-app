@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Home -->
+    <string name="app_name">BestFlix</string>
+    <string name="app_title">Kotlinプロジェクト - M2 MIAGE MBDS</string>。
+    <string name="app_description">グループプロジェクト - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard<br/>About についてもっと知りたい</string>。
+    <string name="title_home">Home</string>
+
+    <!-- ナビゲーション -->
+    <string name="next">次へ</string>。
+    <string name="previous">前</string>。
+
+    <!-- 映画 -->
+    <string name="title_movies">映画</string>
+    <string name="title_detail_movie">映画</string>。
+
+    <!--シリーズ -->
+    <string name="title_tv_home">Home - TVシリーズ</string>
+    <string name="title_tv">TVシリーズ</string>。
+    <string name="title_detail_tv">TVシリーズ</string>。
+
+    <!-- 映画/シリーズ -->
+    <string name="title_category">カテゴリー</string>
+
+    <!-- About -->
+    <string name="title_about">概要</string>
+    <string name="about_member">Project Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="about_description">
+        このプロジェクトでは、2つの可能性があります。
+        <b>映画</b>」メニューでは、映画のカテゴリーが表示され、そのカテゴリー内のさまざまな映画を見ることができます。
+        メニューの「<b>TVシリーズ</b>」でも、同じような可能性があります。
+        最後に、「<b>トレンド</b>」メニューでは、今週の名優たちをご紹介します❤。
+    </string>
+
+    <!-- トレンド -->
+    <string name="title_trending">トレンド</string>
+    <string name="actor_trending_title">今週のトレンド・アクター</string>。
+
+    <!-- 設定コール -->
+    <string name="rest_language">ja-JP</string>
+</resources>

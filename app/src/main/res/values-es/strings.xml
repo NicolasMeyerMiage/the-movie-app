@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Home -->
+    <string name="app_name">BestFlix</string>
+    <string name="app_title">Proyecto Kotlin - M2 MIAGE MBDS</string>
+    <string name="app_description">Proyecto de grupo - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard<br/>Aprende más sobre AboutMe</string>
+    <string name="title_home">Home</string>
+
+    <!-- Navegación -->
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+
+    <!-- Películas -->
+    <string name="title_movies">Películas</string>
+    <string name="title_detail_movie">Películas</string>
+
+    <!-- Telenovelas -->
+    <string name="title_tv_home">Home - Telenovelas</string>
+    <string name="title_tv">Telenovelas</string>
+    <string name="title_detail_tv">Telenovela</string>
+
+    <!-- Películas / Telenovelas -->
+    <string name="title_category">Categoría</string>
+
+    <!-- About -->
+    <string name="title_about">Acerca de</string>
+    <string name="about_member">Grupo de proyectos - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="about_description">
+        En este proyecto, tienes dos posibilidades:
+        En el menú "<b>Películas</b>", puedes ver las categorías de películas y ver las diferentes películas de estas categorías.
+        En el menú "<b>Telenovelas</b>", tienes las mismas posibilidades.
+        Y por último, en el menú "<b>Tendencias</b>", descubre a los famosos actores de la semana ❤.
+    </string>
+
+    <!-- Tendencias -->
+    <string name="title_trending">Tendencias</string>
+    <string name="actor_trending_title">Actores de moda esta semana</string>
+
+    <!-- Parámetros API -->
+    <string name="rest_language">es-ES</string>
+</resources>

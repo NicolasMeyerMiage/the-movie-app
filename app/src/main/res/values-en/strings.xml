@@ -20,11 +20,11 @@
     <string name="title_detail_tv">TV show</string>
 
     <!-- Movies / TVs Shows -->
-    <string name="title_categorie">Category</string>
+    <string name="title_category">Category</string>
 
     <!-- About -->
     <string name="title_about">About Us</string>
-    <string name="about_membre">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
+    <string name="about_member">Group - Nicolas Meyer, Olivier Gaudard, Gregory Bartolo, Samuel Maugard</string>
     <string name="about_description">
         In this project, you have two options:
         In the "<b>Movies</b>" menu, you can see the movie categories and view the individual movies in those categories.
@@ -37,5 +37,5 @@
     <string name="actor_trending_title">Fame actors for this week</string>
 
     <!-- Calls parameters -->
-    <string name="rest_langage">en-US</string>
+    <string name="rest_language">en-US</string>
 </resources>

@@ -9,14 +9,14 @@
         tools:context=".ui.about.AboutHomeFragment">
 
     <TextView
-        android:id="@+id/about_membre"
+        android:id="@+id/about_member"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20dp"
-        android:text="@string/about_membre"
+        android:text="@string/about_member"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -34,7 +34,7 @@
         android:text="@string/about_description"
         android:textAlignment="center"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/about_membre" />
+        app:layout_constraintTop_toBottomOf="@id/about_member" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

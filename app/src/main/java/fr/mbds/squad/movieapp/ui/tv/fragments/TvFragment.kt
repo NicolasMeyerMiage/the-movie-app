@@ -42,7 +42,7 @@ class TvFragment : Fragment() {
                     getTvsByCategoryId(
                         args.catId,
                         getString(
-                            R.string.rest_langage
+                            R.string.rest_language
                         )
                     )
                 }

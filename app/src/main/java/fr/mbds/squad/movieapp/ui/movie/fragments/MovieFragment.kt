@@ -42,7 +42,7 @@ class MovieFragment : Fragment() {
                     getMoviesByCategoryId(
                         args.catId,
                         getString(
-                            R.string.rest_langage
+                            R.string.rest_language
                         )
                     )
                 }

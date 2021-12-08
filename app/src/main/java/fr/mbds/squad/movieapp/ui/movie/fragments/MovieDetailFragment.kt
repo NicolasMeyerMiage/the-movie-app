@@ -40,7 +40,7 @@ class MovieDetailFragment : Fragment() {
                     getMovieById(
                         args.movieId,
                         getString(
-                            R.string.rest_langage
+                            R.string.rest_language
                         )
                     )
                 }
