@@ -11,7 +11,7 @@ internal data class ActorResponse(
         @SerializedName("id")
         val id: Int,
         @SerializedName("adult")
-        val adult: Int,
+        val adult: Boolean,
         @SerializedName("gender")
         val gender: Int,
         @SerializedName("name")
