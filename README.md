@@ -10,6 +10,7 @@ Membres du projet :
 - Gregory Bartolo
 
 Etudiants en **M2 - MIAGE MBDS**. 
+
 [![UNICE](https://raw.githubusercontent.com/NicolasMeyerMiage/the-movie-app/master/images/univ.png)](https://univ-cotedazur.fr)
 
 ### Contexte du projet
