@@ -9,7 +9,7 @@ Membres du projet :
 - Samuel Maugard
 - Gregory Bartolo
 
-Etudiants en **M2 - MIAGE MBDS**.
+Etudiants en **M2 - MIAGE MBDS**. 
 [![UNICE](https://raw.githubusercontent.com/NicolasMeyerMiage/the-movie-app/master/images/univ.png)](https://univ-cotedazur.fr)
 
 ### Contexte du projet
@@ -19,6 +19,7 @@ Dans le cadre du projet Kotlin de 2021/2022, l'application « BextFlix » doit p
 
 ### Multilanguage
 Pour des soucis d'internationalisation (et aussi parce qu'on avait très envie), l'application est disponible en plusieurs langues : 
+
 ![FR](https://cdn-icons-png.flaticon.com/128/939/939621.png)    ![EN](https://cdn-icons-png.flaticon.com/128/939/939631.png)    ![ES](https://cdn-icons-png.flaticon.com/128/939/939640.png)    ![JP](https://cdn-icons-png.flaticon.com/128/939/939616.png)
 
 ### API
