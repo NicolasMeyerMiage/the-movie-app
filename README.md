@@ -1,53 +1,63 @@
-# The Moovie App
+# BestFlix
+## Informations générales
+### Présentation de l'équipe
+[![MBDS](https://raw.githubusercontent.com/NicolasMeyerMiage/the-movie-app/master/images/mbds.png)](http://mbds-fr.org)
 
-## Objectifs fonctionnels  
-Dans ce projet, nous allons créer l'application AnneFlix (The new Netflix). L'objectif est d'exploiter la base de données TheMoovieDB (https://developers.themoviedb.org/3) afin de permettre aux utilisateurs de l'application de visualiser, noter et voir la bande annonce des films de la base de données. 
+Membres du projet : 
+- Nicolas Meyer
+- Olivier Gaudard
+- Samuel Maugard
+- Gregory Bartolo
 
-## Objectifs techniques 
-Techniquement, ce projet devrait nous permettre d'expérimenter de manière plus approfondie les notions vues en cours: 
-- Kotlin
-- Architecture Components 
-- Data Binding
-- Retrofit 
-- Room 
-- .... 
+Etudiants en **M2 - MIAGE MBDS**.
+[![UNICE](https://raw.githubusercontent.com/NicolasMeyerMiage/the-movie-app/master/images/univ.png)](https://univ-cotedazur.fr)
 
-## Quelques librairies à utiliser 
-- Navigation-fragment 
-- Hilt : Injection de dépendances 
-- Gson/Moshi : Sérialisation et Désérialisation JSON 
-- Retrofit: Pour consommer l'API The Moovie DB
-- Picasso/Glide/Coil/ : Pour afficher les images 
-- OkHttp: Client HTTP
+### Contexte du projet
+Dans le cadre du projet Kotlin de 2021/2022, l'application « BextFlix » doit permettre aux utilisateurs de naviguer sur une application développé en Kotlin natif afin de consulter le détail des films appartenant à une catégorie. L'utilisateur peut également consulter le détail des séries télévisés, à l'instar des films, ainsi que les acteurs les plus en vogue de la semaine. 
 
-## Critères d'acceptance
-- Une seule activité
-- Au moins 5 vues différentes (fragments) + un fragment About qui présente le projet et les membres du groupe
-- Gestion de données via une API et Room
-- Gestion de la navigation avec Navigation-fragment
-- Tests unitaires (Datasource et Repository)
-- Au moins 2 tests instrumentaires par vues
+## Fonctionnalités 
 
+### Multilanguage
+Pour des soucis d'internationalisation (et aussi parce qu'on avait très envie), l'application est disponible en plusieurs langues : 
+![FR](https://cdn-icons-png.flaticon.com/128/939/939621.png)    ![EN](https://cdn-icons-png.flaticon.com/128/939/939631.png)    ![ES](https://cdn-icons-png.flaticon.com/128/939/939640.png)    ![JP](https://cdn-icons-png.flaticon.com/128/939/939616.png)
 
-## Différentes étapes 
-1. Fork le repository.  
+### API
+L'API utilisé appartient à : https://developers.themoviedb.org/3
+Liste des chemins utilisés pour l'application :
+- /genre/movie/list
+- /genre/tv/list
+- /discover/movie
+- /discover/tv
+- /movie/id
+- /tv/id
+- /trending/person/week
 
-2. Afficher les catégories de films. Les étapes sont décrites [ici](https://github.com/eamosse/the-movie-app/blob/master/home_tuto.md)
+### Films
+Il est possible à l'utilisateur de consulter le détail d'un film en cliquant sur la première icone de la navigation.
+Lorsque l'utilisateur clique sur la première icone, une liste de catégories de film apparaît. L'utilisateur doit cliquer sur l'une de ces catégories afin que la liste des films en correspondance avec la catégorie choisie apparaisse. 
+Une fois les films affichés, l'utilisateur peut cliquer sur l'une des affiches de films et consulter les détails du film, à savoir :
+- Affiche du film
+- Titre
+- Note /10
+- Résumé
 
-3. Afficher les films d'une catégorie. Les consignes sont par [ici](https://github.com/eamosse/the-movie-app/blob/master/movie_list.md)
+### Séries télés
+Il est possible à l'utilisateur de consulter le détail d'une série télévisé en cliquant sur la second icone de la navigation.
+Lorsque l'utilisateur clique sur la second icone, une liste de catégories de série télé apparaît. L'utilisateur doit cliquer sur l'une de ces catégories afin que la liste des séries télés en correspondance avec la catégorie choisie apparaisse. 
+Une fois les séries télés affichées, l'utilisateur peut cliquer sur l'une des affiches de séries télés et consulter les détails de la série télé, à savoir :
+- Affiche de la série télé
+- Titre
+- Note /10
+- Résumé
 
-## Organisation
-- Groupes de 3 à 4 personnes
-- Commits, branches, et pull requests (il n'y aura pas de notes de groupe, le travail de chacun sera évalué principalement sur les commits) 
+### Tendances
+Il est possible à l'utilisateur de consulter les acteurs les plus fames de la semaine en cliquant sur la troisième icone de la navigation.
+Lorsque l'utilisateur clique sur la troisième icone, la liste des acteurs les plus chauds de la semaine s'affiche. Aucune autre liste n'est consultable par cet écran.
 
-## Rendu
-- Date limite : 30 Novembre 2021 (avant minuit) 
-- Modalités de rendu : Remplir le drive qui vous sera envoyé par mail
-- Ajouté un fichier readme dans lequel vous décrirez 
-    - Le contexte du projet et ses différentes fonctionnalités
-    - La liste des membres du groupe
-    - Captures d'écrans des principales vues 
-    - Vidéos de démonstration de l'application 
+### A propos
+Il est possible à l'utilisateur de consulter la liste des supers membres de ce projet ainsi qu'une courte description de ce projet, un peu comme ce ReadMe mais en plus court.
 
-
-
+## Installation 
+- Récupérer le projet.
+- Synchroniser le projet afin de constater les erreurs de versions.
+- Build le projet.
