@@ -78,3 +78,6 @@ Il est possible à l'utilisateur de consulter la liste des supers membres de ce 
 - Récupérer le projet.
 - Synchroniser le projet afin de constater les erreurs de versions.
 - Build le projet.
+
+## Vidéo de présentation
+https://youtu.be/Pk9S--X35y4 (c'est très laid)
